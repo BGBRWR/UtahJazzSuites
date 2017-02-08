@@ -41,8 +41,8 @@ let selfSignedConfig = {
     port: 465,
     secure: true, // use TLS
     auth: {
-        user: 'walkerxiv',
-        pass: 'scotlandis1'
+        user: config.email,
+        pass: config.pass
     },
     tls: {
         // do not fail on invalid certs
@@ -53,17 +53,20 @@ let selfSignedConfig = {
 function handleSayHello(req, res) {
     // Not the movie transporter!
     var transporter = nodemailer.createTransport(selfSignedConfig, {
-        service: 'Gmail',
-        debug: true,
+        host: 'smtp.gmail.com', port: 465, secure: true, // use TLS
         auth: {
-            user: 'walkerxiv@gmail.com', // Your email id
-            pass: 'scotlandis1' // Your password
+            user: config.email, // Your email id
+            pass: config.pass // Your password
+        },
+        tls: {
+            // do not fail on invalid certs
+            rejectUnauthorized: false
         }
     });
     var text = 'Hello, my name is \n\n' + req.body.firstName + req.body.lastName;
     var mailOptions = {
-        from: 'walkerxiv@gmail.com', // sender address
-        to: req.body.email +', ' + 'walkerxiv@gmail.com', // list of receivers
+        from: config.email, // sender address
+        to: req.body.email + ', ' + config.email, // list of receivers
         subject: 'Email Example', // Subject line
         // text: text //, // plaintext body
         html: '<div style="color: black"><p>Hello! My name is ' + req.body.firstName + ' ' + req.body.lastName + '.</p><p>I\'m interest in the ' + req.body.suite + '.</p><br><b>Questions or Comments</b><br><p style="border: solid 1px black">' + req.body.comment + '</p><h4><br>You can reach me at ' + req.body.email + ' or ' + req.body.telephone + '.</h4></div>'
