@@ -1,0 +1,38 @@
+{
+  "name": "UtahJazzSuite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BGBRWR/UtahJazzSuite"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BGBRWR/UtahJazzSuite/issues"
+  },
+  "homepage": "https://github.com/BGBRWR/UtahJazzSuite#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "connect-pg-simple": "^3.1.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.1",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-order": "^1.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "massive": "^2.5.0",
+    "moment": "^2.15.2",
+    "morgan": "^1.7.0",
+    "nodemailer": "^3.0.2"
+  }
+}

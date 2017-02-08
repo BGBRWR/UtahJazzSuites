@@ -1,0 +1,157 @@
+$yellow: #F89F1F;
+$blue: #0D223F;
+$green: #2D5235;
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: 700;
+    color: $blue;
+}
+
+h3,
+h4 {
+    color: $blue;
+}
+
+a {
+    color: $yellow !important;
+}
+
+.navbar {
+    -webkit-box-shadow: 0 0 5px 0 rgb(0, 0, 0);
+    box-shadow: 0 0 5px 0 rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+.navbar-brand img {
+    height: 30px;
+    margin-top: -5px;
+}
+
+.navbar-text {
+    color: $blue !important;
+}
+
+.noTopMargin {
+    margin-top: 0;
+}
+
+.parallax-seating {
+    height: 25em;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.parallax-seating h1 {
+    color: #fff;
+    padding-top: 2.25em;
+    font-size: 54px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.parallax-seating p {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.parallax-seating {
+    /*background-image: url(http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/jazz/2015-group-tickets-parallax.jpg);*/
+    background-image: url("http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/jazz/JAZ1617-premium-seating_parallax1.jpg");
+    height: 25em;
+    /* Creates the parallax scrolling effect */
+
+}
+.parallax-title {
+  height: 90vh;
+}
+.parallax-title h1 {
+    color: #fff;
+    padding-top: 37vh;
+    font-size: 54px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.parallax-title p {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+section.content {
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+}
+
+section.content h2 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.5em 0;
+    margin-bottom: 1em;
+    border-top: 3px solid #eeeeee;
+    border-bottom: 3px solid #eeeeee;
+}
+.submitButton {
+  background-image: linear-gradient(to bottom,$green 0,darken($green, 10%) 100%);
+}
+.submitButton:hover {
+    background-image: linear-gradient(to bottom,$green 0,darken($green, 10%) 100%);
+    background-color: darken($green, 10%);
+}
+.submitButton:active {
+    background-image: linear-gradient(to bottom,$green 0,darken($green, 10%) 100%);
+}
+.submitButton:focus, .submitButton:active:focus {
+    background-image: linear-gradient(to bottom,$green 0,lighten($green, 10%) 100%);
+    background-color: lighten($green, 10%);
+  // background-position: 0 -15px;
+}
+.submitButton.disabled {
+    background-color: $green;
+    background-image: none;
+}
+.submitButton.disabled:hover {
+    background-color: $green;
+    background-image: none;
+}
+.jazz-photo.seating-map::after {
+    content: "View 3D Seating Map";
+}
+.jazz-photo.seating-map::after {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    width: calc(100% - 30px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.47);
+    text-align: center;
+    transition: all .4s;
+}
+body .jazz-photo.seating-map:hover::after {
+    background: #000;
+    color: $yellow;
+}
+.footer {
+    color: #fff;
+    background-color: $blue;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+}
