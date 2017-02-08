@@ -110,7 +110,7 @@
                 </div>
                 <div ng-controller="emailCtrl" class="col-sm-6">
 
-                    <form data-toggle="validator" class="form">
+                    <form data-toggle="validator" name="form">
                         <h3>Interested in renting a suite for a game?</h3>
                         <p><strong>For more information, please call Chris Barney (Vice President of Premium Seating &amp; VIP Services) at 801.325.2323.</strong></p>
                         <div class="form-group col-sm-6">
@@ -147,7 +147,7 @@
                             <label for="questionsComments">Questions or Comments</label>
                             <textarea class="form-control" id="questionComments" rows="3" ng-model="user.comment"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary pull-right col submitButton" ng-click="sendEmail(user)">Submit</button>
+                        <button type="submit" class="btn btn-primary pull-right col submitButton" ng-click="form.$valid && sendEmail(user)">Submit</button>
                     </form>
                 </div>
                 <div class="col-sm-6 wow fadeInUp">
@@ -280,7 +280,7 @@
 
                         <div ng-controller="emailCtrl" class="col-sm-6">
 
-                            <form data-toggle="validator" class="form">
+                            <form data-toggle="validator" name="form">
                                 <h3>Interested in renting a suite for a game?</h3>
                                 <p><strong>For more information, please call Chris Barney (Vice President of Premium Seating &amp; VIP Services) at 801.325.2323.</strong></p>
                                 <div class="form-group col-sm-6">
@@ -306,18 +306,18 @@
                                 <div class="form-group col-sm-12">
                                     <label for="selectSuite">Select Suite Type</label>
                                     <select class="form-control" id="selectSuite" ng-model="user.suite">
-                                  <option>Any</option>
-                                  <option>Luxury Suite</option>
-                                  <option>Lexus Club</option>
-                                  <option>Executives Club</option>
-                                  <option>Courtside Seats</option>
-                                </select>
+                                    <option>Any</option>
+                                    <option>Luxury Suite</option>
+                                    <option>Lexus Club</option>
+                                    <option>Executives Club</option>
+                                    <option>Courtside Seats</option>
+                                  </select>
                                 </div>
                                 <div class="form-group col-sm-12">
                                     <label for="questionsComments">Questions or Comments</label>
                                     <textarea class="form-control" id="questionComments" rows="3" ng-model="user.comment"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary pull-right col submitButton" ng-click="sendEmail(user)">Submit</button>
+                                <button type="submit" class="btn btn-primary pull-right col submitButton" ng-click="form.$valid && sendEmail(user)">Submit</button>
                             </form>
                         </div>
                         <div class="col-sm-6 wow fadeInUp">
